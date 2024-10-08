@@ -25,7 +25,7 @@ To enhance the performance and efficiency of the EventScheduler, the following d
   - A BST will be used for maintaining an ordered collection of events, allowing for efficient insertion, deletion, and lookup operations. This can facilitate operations like finding the next upcoming event or managing overlapping events.
   
 ## Technologies Used
-- **Frontend**: To be updated
+- **Frontend**: React,js
 - **Backend**: Spring Boot
 - **Database**: PostgreSQL
 - **Security**: Spring Security with OAuth2
