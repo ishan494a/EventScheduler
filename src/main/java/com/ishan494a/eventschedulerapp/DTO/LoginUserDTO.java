@@ -1,17 +1,8 @@
 package com.ishan494a.eventschedulerapp.DTO;
 
-public class UserAccountDTO {
-    private String username;
+public class LoginUserDTO {
     private String email;
     private String password;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     public String getEmail() {
         return email;

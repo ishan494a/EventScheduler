@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './LoginSignUp.css'
+import './LoginSignup.css'
 import user_icon from '../Assets/person.png'
 import email_icon from '../Assets/email.png'
 import password_icon from '../Assets/password.png'
@@ -12,59 +12,15 @@ const LoginSignup = () => {
   const [error, setError] = useState("");
 
   function handleLogin(){
-    const userData = {email, password};
-    fetch('http://localhost:8080/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    }
-    )
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error('Login failed');
-    })
-    .then(data => {
-      console.log("User Logged in successfully:", data);
-      // Handle successful signup (e.g., redirect, show success message)
-    })
-    .catch(error => {
-      console.error("Signup error:", error);
-    });
+    console.log(email, password);
   } 
   function handleSignup(){
-    const userData = {email, password};
-    
-    // Send POST request to backend
-    fetch('http://localhost:8080/api/auth/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error('Signup failed');
-    })
-    .then(data => {
-      console.log("User signed up successfully:", data);
-      // Handle successful signup (e.g., redirect, show success message)
-    })
-    .catch(error => {
-      console.error("Signup error:", error);
-    });
+  
   }
   
   const handleSubmit = async () => {
     if (action === "Sign Up" && password !== confirmPassword) {
       setError("Passwords do not match!");
-      console.log({ email, password });
     } else {
       setError("");
       if(action === "Login"){

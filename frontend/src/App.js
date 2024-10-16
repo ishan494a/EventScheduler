@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import LoginSignup from "./Components/LoginSignUp/LoginSignup";
+import LoginSignup from "./Components/LoginSignup/LoginSignup";
 
 function App() {
   return (
